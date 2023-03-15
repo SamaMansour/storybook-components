@@ -8,7 +8,6 @@ import { MdStarRate, MdEdit } from 'react-icons/md'
 interface CardProps {
   
   borderColor?: string;
-  size?: 'small' | 'medium' | 'large';
   language?: 'left' | 'right'
   label: string;
   description?: string;
@@ -27,7 +26,6 @@ export const UpDownIcon = createIcon({
   ),
 })
 export const ItemCard = ({
-  size = 'medium',
   language = 'right',
   borderColor,
   label,
@@ -38,11 +36,16 @@ export const ItemCard = ({
 }: CardProps) => {
   const [border, setBorder] = React.useState('white');
   const [buttonValue, setButtonValue] = React.useState('2')
+  const [icon, setIcon] = React.useState('white')
   const controlBorder = ()=>{
     setButtonValue('1');
     console.log("hello");
     setBorder('grey.400')
 
+  }
+
+  const controlColor = ()=>{
+    setIcon('grey');
   }
 
   return (
@@ -55,9 +58,9 @@ export const ItemCard = ({
     <Heading size='md' textAlign = {language}>{label}</Heading>
     </Radio>
     <ButtonGroup spacing='6'>
-      <Button flex='1' colorScheme='whiteAlpha' leftIcon={ <Icon as={MdStarRate} w={8} h={8} color='blue.500' />}>
+      <Button  onClick= {controlColor} colorScheme='whiteAlpha' leftIcon={ <Icon as={MdStarRate} w={8} h={8} color={icon} />}>
       </Button>
-      <Button flex='1'colorScheme='whiteAlpha' leftIcon={ <Icon as={MdEdit} w={8} h={8} color='blue.500' />}>
+      <Button onClick = {controlColor} colorScheme='whiteAlpha' leftIcon={ <Icon as={MdEdit} w={8} h={8} color={icon} />}>
       </Button>
 </ButtonGroup>
   </Stack>

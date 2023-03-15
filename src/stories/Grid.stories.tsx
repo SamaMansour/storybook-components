@@ -7,7 +7,6 @@ export default {
   title: 'Items/grid',
   component: ItemGrid,
   argTypes: {
-    backgroundColor: { control: 'color' },
   },
 } as ComponentMeta<typeof ItemGrid>;
 
@@ -15,7 +14,6 @@ const Template: ComponentStory<typeof ItemGrid> = (args) => <ItemGrid {...args} 
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
   label: 'Title',
 };
 
