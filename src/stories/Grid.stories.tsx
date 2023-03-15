@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ItemGrid } from './Grid';
 
 export default {
-  title: 'Grid/grid',
+  title: 'Items/grid',
   component: ItemGrid,
   argTypes: {
     backgroundColor: { control: 'color' },
