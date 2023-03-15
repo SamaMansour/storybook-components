@@ -1,7 +1,7 @@
 import React from 'react';
 import './grid.css';
 import { Grid, GridItem } from '@chakra-ui/react'
-import { ItemCard } from './Card';
+import { ItemCard } from '../Card/Card';
 interface GridProps {
   
   columns?: 'repeat(3, 1fr)' | 'repeat(4, 1fr)' | 'repeat(2, 1fr)';
