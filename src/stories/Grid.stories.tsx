@@ -1,21 +1,22 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ItemCard } from './Card';
+import { ItemGrid } from './Grid';
 
 export default {
-  title: 'Crad/card',
-  component: ItemCard,
+  title: 'Grid/grid',
+  component: ItemGrid,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof ItemCard>;
+} as ComponentMeta<typeof ItemGrid>;
 
-const Template: ComponentStory<typeof ItemCard> = (args) => <ItemCard {...args} />;
+const Template: ComponentStory<typeof ItemGrid> = (args) => <ItemGrid {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: 'Title',
 };
+
 

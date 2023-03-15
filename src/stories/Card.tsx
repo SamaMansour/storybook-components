@@ -1,31 +1,33 @@
 import React from 'react';
 import './card.css';
 import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Stack, Box, StackDivider, Radio, RadioGroup, Divider, Link, Icon} from '@chakra-ui/react'
-import { MdSettings } from 'react-icons/md'
 interface CardProps {
   
   primary?: boolean;
-  backgroundColor?: string;
+  borderColor?: string;
   size?: 'small' | 'medium' | 'large';
   label: string;
   description?: string;
   value?: string
-  onClick?: () => void;
+  onSelect?: () => void;
 }
 
 export const ItemCard = ({
   primary = false,
   size = 'medium',
-  backgroundColor,
+  borderColor,
   label,
   description,
   value,
+  onSelect,
   ...props
 }: CardProps) => {
+    const [border, setBorder] = React.useState<string>();
+
   const mode = primary ? 'storybook-card--primary' : 'storybook-card--secondary';
   return (
 
-  <Card>
+  <Card w ='100%' borderColor= {borderColor} >
   <CardHeader>
   <RadioGroup defaultValue='1'>
   <Stack>
@@ -38,7 +40,7 @@ export const ItemCard = ({
   <Divider />
   <CardBody>
     <Stack divider={<StackDivider />} spacing='4'>
-      <Box>
+      <Box p ={12}>
         <Text pt='2' fontSize='sm'>
           {description}
         </Text>
