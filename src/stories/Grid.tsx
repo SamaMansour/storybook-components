@@ -4,7 +4,7 @@ import { Grid, GridItem } from '@chakra-ui/react'
 import { ItemCard } from './Card';
 interface GridProps {
   
-  columns?: 'repeat(3, 1fr)' | 'repeat(4, 1fr)' | 'repeat(6, 1fr)';
+  columns?: 'repeat(3, 1fr)' | 'repeat(4, 1fr)' | 'repeat(2, 1fr)';
   label: string;
   description?: string;
   value?: string
@@ -13,7 +13,7 @@ interface GridProps {
 
 export const ItemGrid = ({
   size = 'medium',
-  columns = 'repeat(6, 1fr)',
+  columns = 'repeat(4, 1fr)',
   label,
   description,
   value,

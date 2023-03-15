@@ -1,14 +1,14 @@
 import React from 'react';
 import './card.css';
-import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Stack, Box, StackDivider, Radio, RadioGroup, Divider, Link, Icon, Center, Button, ButtonGroup, CreateIcon} from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Stack, Box, StackDivider, Radio, RadioGroup, Divider, Link, Icon, Center, Button, Spacer, ButtonGroup, CreateIcon} from '@chakra-ui/react';
 import { createIcon } from '@chakra-ui/icons';
 import { MdStarRate, MdEdit } from 'react-icons/md'
 
 /* eslint-disable */
 interface CardProps {
   
-  borderColor?: string;
   language?: 'left' | 'right'
+  item?: ''| 'Show Items'
   label: string;
   description?: string;
   value?: string
@@ -27,7 +27,7 @@ export const UpDownIcon = createIcon({
 })
 export const ItemCard = ({
   language = 'right',
-  borderColor,
+  item = '',
   label,
   description,
   value,
@@ -57,7 +57,8 @@ export const ItemCard = ({
     <Radio value='1' onClick = {()=> setBorder('grey')}>
     <Heading size='md' textAlign = {language}>{label}</Heading>
     </Radio>
-    <ButtonGroup spacing='6'>
+      <Spacer />
+    <ButtonGroup spacing='6' pr={0}>
       <Button  onClick= {controlColor} colorScheme='whiteAlpha' leftIcon={ <Icon as={MdStarRate} w={8} h={8} color={icon} />}>
       </Button>
       <Button onClick = {controlColor} colorScheme='whiteAlpha' leftIcon={ <Icon as={MdEdit} w={8} h={8} color={icon} />}>
@@ -80,7 +81,7 @@ export const ItemCard = ({
          <Text color='blue.400' fontSize='1xl'>
           {value}
          </Text>
-        <Link color= 'blue'>Show Items</Link>
+        <Link color= 'blue'>{item}</Link>
       </Box>
     </Stack>
   </CardBody>
