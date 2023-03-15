@@ -7,6 +7,7 @@ interface GridProps {
   primary?: boolean;
   borderColor?: string;
   size?: 'small' | 'medium' | 'large';
+  columns?: 'repeat(3, 1fr)' | 'repeat(6, 1fr)' | 'repeat(9, 1fr)';
   label: string;
   description?: string;
   value?: string
@@ -16,6 +17,7 @@ interface GridProps {
 export const ItemGrid = ({
   primary = false,
   size = 'medium',
+  columns = 'repeat(6, 1fr)',
   borderColor,
   label,
   description,
@@ -28,7 +30,7 @@ export const ItemGrid = ({
   const mode = primary ? 'storybook-card--primary' : 'storybook-card--secondary';
   return (
 
- <Grid templateColumns='repeat(3, 1fr)' gap={3}>
+ <Grid templateColumns= { columns } gap={3}>
   <ItemCard  
   primary= {false}
   borderColor= {'grey'}
@@ -41,6 +43,7 @@ export const ItemGrid = ({
   primary= {false}
   borderColor= {'grey'}
   size= {'small'}
+  language ={ 'left'}
   label = { label }
   description = { description }
   value ={ value }
@@ -49,6 +52,7 @@ export const ItemGrid = ({
   primary= {false}
   borderColor= {'grey'}
   size= {'small'}
+  language ={ 'left'}
   label = { label }
   description = { description }
   value ={ value }
@@ -57,6 +61,7 @@ export const ItemGrid = ({
   primary= {false}
   borderColor= {'grey'}
   size= {'small'}
+  language ={ 'left'}
   label = { label }
   description = { description }
   value ={ value }

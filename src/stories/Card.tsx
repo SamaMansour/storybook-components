@@ -1,11 +1,12 @@
 import React from 'react';
 import './card.css';
-import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Stack, Box, StackDivider, Radio, RadioGroup, Divider, Link, Icon} from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Stack, Box, StackDivider, Radio, RadioGroup, Divider, Link, Icon, Center} from '@chakra-ui/react'
 interface CardProps {
   
   primary?: boolean;
   borderColor?: string;
   size?: 'small' | 'medium' | 'large';
+  language?: 'left' | 'right'
   label: string;
   description?: string;
   value?: string
@@ -15,6 +16,7 @@ interface CardProps {
 export const ItemCard = ({
   primary = false,
   size = 'medium',
+  language = 'right',
   borderColor,
   label,
   description,
@@ -32,16 +34,18 @@ export const ItemCard = ({
   <RadioGroup defaultValue='1'>
   <Stack>
     <Radio value='1'>
-    <Heading size='md'>{label}</Heading>
+    <Heading size='md' textAlign = {language}>{label}</Heading>
     </Radio>
   </Stack>
 </RadioGroup>
 </CardHeader>
-  <Divider />
+  <Center>
+  <Divider width = '80%'/>
+  </Center>
   <CardBody>
     <Stack divider={<StackDivider />} spacing='4'>
       <Box p ={12}>
-        <Text pt='2' fontSize='sm'>
+        <Text pt='2' fontSize='sm' textAlign = {language}>
           {description}
         </Text>
          <Text color='blue.400' fontSize='1xl'>
