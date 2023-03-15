@@ -30,7 +30,7 @@ export const ItemGrid = ({
   const mode = primary ? 'storybook-card--primary' : 'storybook-card--secondary';
   return (
 
- <Grid templateColumns= { columns } gap={3}>
+ <Grid templateColumns= { columns } gap={12}>
   <ItemCard  
   primary= {false}
   borderColor= {'grey'}
