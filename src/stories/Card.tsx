@@ -59,9 +59,9 @@ export const ItemCard = ({
     </Radio>
       <Spacer />
     <ButtonGroup spacing='6' pr={0}>
-      <Button  onClick= {controlColor} colorScheme='whiteAlpha' leftIcon={ <Icon as={MdStarRate} w={8} h={8} color={icon} />}>
+      <Button w='50%' onClick= {controlColor} colorScheme='whiteAlpha' leftIcon={ <Icon as={MdStarRate} w={8} h={8} color={icon} />}>
       </Button>
-      <Button onClick = {controlColor} colorScheme='whiteAlpha' leftIcon={ <Icon as={MdEdit} w={8} h={8} color={icon} />}>
+      <Button w='50%' onClick = {controlColor} colorScheme='whiteAlpha' leftIcon={ <Icon as={MdEdit} w={8} h={8} color={icon} />}>
       </Button>
 </ButtonGroup>
   </Stack>
