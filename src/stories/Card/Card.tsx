@@ -16,7 +16,7 @@ interface CardProps {
 }
 
 export const ItemCard = ({
-  language = 'right',
+  language = 'left',
   item = '',
   label,
   description,
