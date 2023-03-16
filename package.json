@@ -48,7 +48,7 @@
         "rules": {
           "import/no-anonymous-default-export": "off"
         },
-         "main": "elements/dist.js",
+         "main": "elements/dist.js"
       }
     ]
   },
