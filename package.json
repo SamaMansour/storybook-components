@@ -1,6 +1,7 @@
 {
   "name": "apps",
   "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
     "@chakra-ui/react": "^2.5.1",
@@ -30,8 +31,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "main": "doc/index.ts"
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -42,11 +42,13 @@
       {
         "files": [
           "**/*.stories.*",
-          "doc"
+          "elements"
+          
         ],
         "rules": {
           "import/no-anonymous-default-export": "off"
-        }
+        },
+         "main": "elements/dist.js",
       }
     ]
   },
@@ -64,13 +66,11 @@
   },
   "devDependencies": {
     "@chakra-ui/storybook-addon": "^4.0.16",
-    "@nrwl/storybook": "^15.8.6",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
     "@storybook/builder-webpack5": "^6.5.16",
-    "@storybook/jest": "^0.0.10",
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/node-logger": "^6.5.16",
     "@storybook/preset-create-react-app": "^4.1.2",
@@ -79,6 +79,5 @@
     "babel-plugin-named-exports-order": "^0.0.2",
     "prop-types": "^15.8.1",
     "webpack": "^5.76.1"
-  },
-  
+  }
 }
