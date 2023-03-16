@@ -25,29 +25,21 @@ export const ItemGrid = ({
 
  <Grid templateColumns= { columns } gap={12}>
   <ItemCard  
-  borderColor= {'grey'}
-  size= {'small'}
   label = { label }
   description = { description }
   value = { value }
   onClick= { () => console.log("hello")} />
    <ItemCard  
-  borderColor= {'grey'}
-  size= {'small'}
   label = { label }
   description = { description }
   value ={ value }
   onClick= { () => console.log("hello")} />
    <ItemCard  
-  borderColor= {'grey'}
-  size= {'small'}
   label = { label }
   description = { description }
   value ={ value }
   onClick= { () => console.log("hello")} />
    <ItemCard  
-  borderColor= {'grey'}
-  size= {'small'}
   label = { label }
   description = { description }
   value ={ value }
