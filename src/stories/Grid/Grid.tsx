@@ -12,7 +12,6 @@ interface GridProps {
 }
 
 export const ItemGrid = ({
-  size = 'medium',
   columns = 'repeat(4, 1fr)',
   label,
   description,
