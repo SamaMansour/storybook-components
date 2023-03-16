@@ -40,7 +40,8 @@
     "overrides": [
       {
         "files": [
-          "**/*.stories.*"
+          "**/*.stories.*",
+          "doc"
         ],
         "rules": {
           "import/no-anonymous-default-export": "off"
@@ -78,8 +79,5 @@
     "prop-types": "^15.8.1",
     "webpack": "^5.76.1"
   },
-    "files": [
-    "doc"
-  ],
   "main": "doc/index.ts",
 }
