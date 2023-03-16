@@ -30,7 +30,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "main": "doc/index.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -79,5 +80,5 @@
     "prop-types": "^15.8.1",
     "webpack": "^5.76.1"
   },
-  "main": "doc/index.ts",
+  
 }
