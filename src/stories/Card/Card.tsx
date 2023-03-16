@@ -1,6 +1,6 @@
 import React from 'react';
 import './card.css';
-import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Stack, Box, StackDivider, Radio, RadioGroup, Divider, Link, Icon, Center, Button, Spacer, ButtonGroup, CreateIcon} from '@chakra-ui/react';
+import { Card, CardHeader, CardBody, CardFooter, Heading, Text, Stack, Box, StackDivider, Radio, RadioGroup, Divider, Link, Icon, Center, Button, Spacer, ButtonGroup} from '@chakra-ui/react';
 import { createIcon } from '@chakra-ui/icons';
 import { MdStarRate, MdEdit } from 'react-icons/md'
 
@@ -15,16 +15,6 @@ interface CardProps {
   onClick?: () => void;
 }
 
-export const UpDownIcon = createIcon({
-  displayName: 'UpDownIcon',
-  viewBox: '0 0 200 200',
-  path: (
-    <path
-      fill='red'
-      d='M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0'
-    />
-  ),
-})
 export const ItemCard = ({
   language = 'right',
   item = '',
